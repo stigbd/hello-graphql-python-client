@@ -1,0 +1,25 @@
+[project]
+name = "hello-graphql-python-client"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "Stig B. Dørmænen", email = "stigbd@gmail.com" }]
+dependencies = ["gql[httpx]~=3.5.0"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"hello-graphql-python-client" = "hello_graphql_python_client:main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pyright~=1.1.385",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
